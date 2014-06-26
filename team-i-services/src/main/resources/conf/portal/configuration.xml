@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<configuration>
+   <component>
+      <type>org.exoplatform.addons.codefest.team_i.TaskManagementRESTServiceTeamI</type>
+   </component>
+</configuration>
