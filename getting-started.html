@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Getting Started-eXo UX Guidelines</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="css/docs.css" rel="stylesheet">
+    <link href="css/prettify.css" rel="stylesheet">
+    <link href="css/exo-platform.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <script src="js/track.js" data-site-id="4f0dc9fef5a1f55508000013" id="gauges-tracker" async="" type="text/javascript"></script><script src="js/ga.js" async="" type="text/javascript"></script><script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-146052-10']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  </head>
+
+  <body data-twttr-rendered="true" data-spy="scroll" data-target=".bs-docs-sidebar">
+
+    <!-- Navbar
+    ================================================== -->
+    <div class="navbar navbar-fixed-top">
+		<div class="navbar-inner clearfix">
+			<button data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar" type="button">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a href="./index.html" class="brand"><img src="img/global.logo.png"/></a>
+			<div class="nav-collapse">
+				<ul class="nav">
+					<li class="active"><a href="getting-started.html">Getting Started</a></li>
+          <li><a href="Components.html">Components</a></li>
+					<li><a href="Patterns.html">Patterns</a></li>
+					</ul>
+			</div>
+      <div class="pull-right" style="margin-top: 11px;">
+        <a class="btnDownloadTop" target="_blank" href="http://community.exoplatform.com/downloads"></a>
+        <a class="btnLearMore" href="http://www.exoplatform.com"></a>
+        </div>
+		</div>
+	</div>
+
+<!-- Subhead
+================================================== -->
+<header class="jumbotron subhead" id="overview">
+  <div class="container">
+    <h1>Getting Started</h1>
+    <p>Overview of eXo UX Guidelines, its structure and how to get started with eXo UX templates.</p>
+  </div>
+</header>
+
+
+  <div class="container">
+
+    <!-- Docs nav
+    ================================================== -->
+    <div class="row">
+      <div class="span3 bs-docs-sidebar">
+        <ul class="nav nav-list bs-docs-sidenav affix-top">
+          <li class="active"><a href="#download-bootstrap"><i class="icon-chevron-right"></i>Download source</a></li>
+          <li class=""><a href="#file-structure"><i class="icon-chevron-right"></i>File structure</a></li>
+          <li><a href="#contents"><i class="icon-chevron-right"></i>What's included?</a></li>
+          <li><a href="#html-template"><i class="icon-chevron-right"></i>HTML template</a></li>
+          <li><a href="#what-next"><i class="icon-chevron-right"></i>What's next?</a></li>
+        </ul>
+      </div>
+      <div class="span9">
+
+        <!-- Download
+        ================================================== -->
+        <section id="download-bootstrap">
+          <div class="page-header">
+            <h2>Download source</h2>
+          </div>
+          <p class="lead">The latest version of eXo UI Guidelines project can be downloaded directly from GitHub.</p>
+          <div class="row-fluid">
+            <p><a class="btn btn-large btn-primary" href="https://github.com/exoplatform/ux-guidelines/zipball/master" onclick="_gaq.push(['_trackEvent', 'Getting started', 'Download', 'Download compiled']);">Download eXo UX Guidelines</a></p>
+         </div>
+          <p>After downloading, you can use code editors, such as Notepad++, Text Editor, Quanta Plus or Sublime Text, to modify files.
+			Also, you are required to have some knowledge of CSS and HTML.</p>
+        </section>
+
+
+        <!-- File structure
+        ================================================== -->
+        <section id="file-structure">
+          <div class="page-header">
+            <h2>File structure</h2>
+          </div>
+          <p class="lead">The structure of eXo UX Guidelines is similar with that of Bootstrap.</p>
+        <p>After downloading, you need to unzip the compressed folder. The structure of eXo UX Guidelines is displayed below:</p>
+<pre class="prettyprint"><span class="pln">  exo-ux-guidelines </span><span class="pun">/</span><span class="pln">
+  </span><span class="pun">├──</span><span class="pln"> css</span><span class="pun">/</span><span class="pln">
+  </span><span class="pun">│</span><span class="pln">   </span><span class="pun">├──</span><span class="pln"> bootstrap</span><span class="pun">.</span><span class="pln">css
+  </span><span class="pun">│</span><span class="pln">   </span><span class="pun">├──</span><span class="pln"> bootstrap</span><span class="pun">.</span><span class="pln">min</span><span class="pun">.</span><span class="pln">css
+  </span><span class="pun">│</span><span class="pln">   </span><span class="pun">├──</span><span class="pln"> exo-platform</span><span class="pun">.</span><span class="pln">css
+  </span><span class="pun">├──</span><span class="pln"> js</span><span class="pun">/</span><span class="pln">
+  </span><span class="pun">│</span><span class="pln">   </span><span class="pun">├──</span><span class="pln"> bootstrap</span><span class="pun">.</span><span class="pln">js
+  </span><span class="pun">│</span><span class="pln">   </span><span class="pun">├──</span><span class="pln"> bootstrap</span><span class="pun">.</span><span class="pln">min</span><span class="pun">.</span><span class="pln">js
+  </span><span class="pun">├──</span><span class="pln"> img</span><span class="pun">/</span><span class="pln">
+  </span><span class="pun">│</span><span class="pln">   </span><span class="pun">├──</span><span class="pln"> icon</span><span class="pun">_</span><span class="pln">start</span><span class="pun">.</span><span class="pln">png
+  </span><span class="pun">│</span><span class="pln">   </span><span class="pun">├──</span><span class="pln"> icon</span><span class="pun">_</span><span class="pln">pattern</span><span class="pun">.</span><span class="pln">png
+  </span><span class="pun">│</span><span class="pln">   </span><span class="pun">├──</span><span class="pln"> exo-platform-icons</span>
+  <span class="pun">└──</span><span class="pln"> README</span><span class="pun">.</span><span class="pln">md</span></pre>
+<p>Most CSS and JavaScript files are from Bootstrap. 
+In addition, to build the eXo Platform style, <code>exo-platform.css</code> and <code>uxp-pattern.css</code> are customized by eXo Platform Team.</p>
+<p>Please note that most JavaScript plugins require jQuery to be included. Besides, some free JavaScripts are also applied into eXo UX Guidelines to create dynamic samples.</p>
+        </section>
+
+
+        <!-- Contents
+        ================================================== -->
+        <section id="contents">
+          <div class="page-header">
+            <h2>What's included?</h2>
+          </div>
+          <p class="lead">eXo UX Guidelines is completely based on Bootstrap that is customized by the eXo Platform style with the main content below:</p>
+          <h4><a href="getting-started.html">Getting Started</a></h4>
+          <p>Overview of eXo UX Guidelines, its structure and how to get started with eXo UX templates.</p>
+          <h4><a href="Patterns.html">Patterns</a></h4>
+          <p>Patterns used for specific functions or objects that follow the eXo Platform style. With this topic, you can understand and adopt in your developments.</p>
+          <h4><a href="Components.html">Components</a></h4>
+          <p>Usage of eXo Platform components and best practices for customizing eXo Platform.</p>
+          </section>
+
+        <!-- HTML template
+        ================================================== -->
+        <section id="html-template">
+          <div class="page-header">
+            <h2>HTML template</h2>
+          </div>
+          <p class="lead">eXo UX Guidelines uses a basic HTML template provided by Bootstrap.</p>
+          <p><strong>Here is a typical HTML file</strong>:</p>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="dec">&lt;!DOCTYPE html&gt;</span></li><li class="L1"><span class="tag">&lt;html&gt;</span></li><li class="L2"><span class="pln">  </span><span class="tag">&lt;head&gt;</span></li><li class="L3"><span class="pln">    </span><span class="tag">&lt;title&gt;</span><span class="pln">Bootstrap Template</span><span class="tag">&lt;/title&gt;</span></li><li class="L4"><span class="pln">  </span><span class="tag">&lt;/head&gt;</span></li><li class="L5"><span class="pln">  </span><span class="tag">&lt;body&gt;</span></li><li class="L6"><span class="pln">    </span><span class="tag">&lt;h1&gt;</span><span class="pln">Hello, world!</span><span class="tag">&lt;/h1&gt;</span></li><li class="L7"><span class="pln">    </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"http://code.jquery.com/jquery-latest.js"</span><span class="tag">&gt;&lt;/script&gt;</span></li><li class="L8"><span class="pln">  </span><span class="tag">&lt;/body&gt;</span></li><li class="L9"><span class="tag">&lt;/html&gt;</span></li></ol></pre>
+          <p>To make this <strong>a Bootstrapped template with the eXo Platform style</strong>, just include the appropriate CSS and JavaScript files of Bootstrap and the customized CSS that is provided by eXo Platform Team.</p>
+<p>Please note that <code>exo-platform.css</code> is the <strong>Core.css</strong> file that is located in <strong>skin/css</strong> of <strong>eXoResource.war</strong> in the <strong>eXo Platform package</strong>. You can copy, rename and put it in the general <strong>css</strong> folder that contains Bootstrap CSS.
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="dec">&lt;!DOCTYPE html&gt;</span></li><li class="L1"><span class="tag">&lt;html&gt;</span></li><li class="L2"><span class="pln">  </span><span class="tag">&lt;head&gt;</span></li><li class="L3"><span class="pln">    </span><span class="tag">&lt;title&gt;</span><span class="pln">Bootstrap Template</span><span class="tag">&lt;/title&gt;</span></li><li class="L4"><span class="pln">    </span><span class="com">&lt;!-- Bootstrap --&gt;</span></li><li class="L5"><span class="pln">    </span><span class="tag">&lt;link</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"css/bootstrap.css"<span class="pln"> </span><span class="atn">rel</span><span class="pun">=</span><span class="atv">"stylesheet"</span><span class="tag">&gt;</span>
+<span class="com">    &lt;!-- eXo Platform CSS --&gt;</span></li><li class="L5"><span class="pln">    </span><span class="tag">&lt;link</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"css/exo-platform.css"</span><span class="pln"> </span><span class="atn">rel</span><span class="pun">=</span><span class="atv">"stylesheet"</span><span class="tag">&gt;</span></li><li class="L6"><span class="pln">  </span><span class="tag">&lt;/head&gt;</span></li><li class="L7"><span class="pln">  </span><span class="tag">&lt;body&gt;</span></li><li class="L8"><span class="pln">    </span><span class="tag">&lt;h1&gt;</span><span class="pln">Hello, world!</span><span class="tag">&lt;/h1&gt;</span></li><li class="L9"><span class="pln">    </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"http://code.jquery.com/jquery-latest.js"</span><span class="tag">&gt;&lt;/script&gt;</span></li><li class="L0"><span class="pln">    </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"js/bootstrap.min.js"</span><span class="tag">&gt;&lt;/script&gt;</span></li><li class="L1"><span class="pln">  </span><span class="tag">&lt;/body&gt;</span></li><li class="L2"><span class="tag">&lt;/html&gt;</span></li></ol></pre>
+             </section>
+
+        <!-- Next
+        ================================================== -->
+        <section id="what-next">
+          <div class="page-header">
+            <h2>What's next?</h2>
+          </div>
+          <p class="lead">Based on the Bootstrap development, the eXo Platform style and eXo UX Guidelines will be updated accordingly. 
+		  More patterns will be added and customized following Bootstrap and the eXo Platform style.</p>
+        </section>
+      </div>
+    </div>
+    <div id="footer">
+		Copyright ©2014. All rights reserved. <a href="http://www.exoplatform.com">eXo Platform SAS</a>
+	</div>
+
+</div>
+    <!-- Footer
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="js/widgets.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/prettify.js"></script>
+    <script src="js/bootstrap-transition.js"></script>
+    <script src="js/bootstrap-alert.js"></script>
+    <script src="js/bootstrap-modal.js"></script>
+    <script src="js/bootstrap-dropdown.js"></script>
+    <script src="js/bootstrap-scrollspy.js"></script>
+    <script src="js/bootstrap-tab.js"></script>
+    <script src="js/bootstrap-tooltip.js"></script>
+    <script src="js/bootstrap-popover.js"></script>
+    <script src="js/bootstrap-button.js"></script>
+    <script src="js/bootstrap-collapse.js"></script>
+    <script src="js/bootstrap-carousel.js"></script>
+    <script src="js/bootstrap-typeahead.js"></script>
+    <script src="js/bootstrap-affix.js"></script>
+    <script src="js/application-update.js"></script>
+
+
+    <!-- Analytics
+    ================================================== -->
+    <script>
+      var _gauges = _gauges || [];
+      (function() {
+        var t   = document.createElement('script');
+        t.type  = 'text/javascript';
+        t.async = true;
+        t.id    = 'gauges-tracker';
+        t.setAttribute('data-site-id', '4f0dc9fef5a1f55508000013');
+        t.src = '//secure.gaug.es/track.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(t, s);
+      })();
+    </script -->
+
+  		<script>
+  			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  			ga('create', 'UA-1292368-34', 'exoplatform.github.io');
+  			ga('send', 'pageview');
+		</script>
+
+</body>
+</html>
