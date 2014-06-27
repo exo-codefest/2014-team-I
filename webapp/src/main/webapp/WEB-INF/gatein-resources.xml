@@ -24,31 +24,23 @@
     xsi:schemaLocation="http://www.gatein.org/xml/ns/gatein_resources_1_3 http://www.gatein.org/xml/ns/gatein_resources_1_3" 
     xmlns="http://www.gatein.org/xml/ns/gatein_resources_1_3">
 
-  <!-- FileExplorerPortlet skin -->
-  <portlet-skin>
+  <!-- portlet-skin>
     <application-name>TaskManagementPortlet</application-name>
     <portlet-name>TaskManagementPortlet</portlet-name>
     <skin-name>Default</skin-name>
     <css-path>/skin/DefaultStylesheet.css</css-path>
-  </portlet-skin>
+  </portlet-skin-->
   
    <portlet>
     <name>TaskManagementPortlet</name>
     <module>
-    <depends>
-      <module>TaskManagementScript</module>
-    </depends>
+      <script>
+        <path>/javascript/taskmanagement.js</path>
+      </script>
+      <depends>
+        <module>jquery</module>
+         <as>$</as>
+      </depends>
     </module>
   </portlet>
-
-  <module>
-    <name>TaskManagementScript</name>
-    <script>
-      <path>/javascript/TaskManagement.js</path>
-    </script>
-    <depends>
-      <module>jquery</module>
-      <as>gj</as>
-    </depends>
-  </module>
 </gatein-resources>

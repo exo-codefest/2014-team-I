@@ -46,4 +46,7 @@
       <scope>provided</scope>
     </dependency>
   </dependencies>
+  <build>
+    <finalName>team-i-addon-webapp</finalName>
+  </build>
 </project>
