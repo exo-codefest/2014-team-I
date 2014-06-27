@@ -1,4 +1,5 @@
-Codefest 2014 team I repository
+D2 - Task Management Addon
+CodeFest 2014 team I
 ===========
 
 # The team I
@@ -10,10 +11,5 @@ Nguyen Bao An | CWI
 Tran Nguyen Son Tung | SN/ITOP
 Tran Trung Thanh | GSS
 
-# How to build
 
-	git clone git@github.com:exo-codefest/2014-team-I.git
-	cd 2014-team-I
-	mvn clean install
-
-<img src="https://app.box.com/representation/file_version_15946625140/image_2048/1.png?shared_name=ginql8g30t0gg1ju6xhw" />
+![alt text](https://app.box.com/representation/file_version_15946621028/image_2048/1.png?shared_name=ginql8g30t0gg1ju6xhw "D2 logo")
