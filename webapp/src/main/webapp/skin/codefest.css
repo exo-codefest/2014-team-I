@@ -1,0 +1,110 @@
+/*!
+* Code Fest 2014 
+*/
+
+.div1 {
+display: inline-block;padding:10px;border:1px solid #aaaaaa;
+color:#aeaeae
+}
+
+.task_text {width:70px;height:200px}
+
+.row_distance{
+margin: 20px;
+}
+
+.top_position{
+}
+
+.card_center{
+min-height: 100px;
+background: none repeat scroll 0 0 #dee7ff;
+margin-bottom: 20px;
+text-align: center;
+background-color:#27ae60;
+}
+
+.card_center_title{
+font-weight:bold;
+font-size: 16px;
+background-color:#2ecc71;
+color: white;
+padding: 15px;
+word-wrap: break-word;
+display: block;
+}
+
+.card_center_description{
+font-size: 12px;
+background-color:#27ae60;
+color: white;
+word-wrap: break-word;
+display: block;
+padding: 15px;
+}
+
+.left_inprogress .card_center_title{
+font-weight:bold;
+font-size: 16px;
+background-color:#2ecc71;
+color: white;
+padding: 0px;
+word-wrap: break-word;
+display: block;
+
+}
+
+.left_inprogress .card_center_description{
+font-size: 12px;
+background-color:#27ae60;
+color: white;
+word-wrap: break-word;
+display: block;
+padding: 0px;
+}
+
+
+.center_position{
+min-height: 600px;
+border:1px solid #aaaaaa;
+background: none repeat scroll 0 0 white;
+color:#aeaeae;
+}
+
+.add_task{
+background-image: url(../img/add_task.png);
+background-repeat: no-repeat;
+}
+
+.left_position{
+border:1px solid #aaaaaa;
+min-height: 200px;
+font-size: 25px;
+color:#aeaeae;
+}
+
+.left_inprogress{
+background: none repeat scroll 0 0 #345e96;
+padding: 10px;
+font-size: 25px;
+color:#aeaeae;
+}
+
+.left_done{
+background: none repeat scroll 0 0 #505050;
+padding: 10px;
+font-size: 25px;
+color:#aeaeae;
+}
+
+.left_cancel{
+background: none repeat scroll 0 0  #d0dde3;
+padding: 10px;
+font-size: 25px;
+color:#aeaeae;
+}
+
+img.displayed {
+    display: block;
+    margin-left: auto;
+    margin-right: auto }
