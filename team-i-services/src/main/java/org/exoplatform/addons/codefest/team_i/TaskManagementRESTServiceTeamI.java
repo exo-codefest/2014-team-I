@@ -14,6 +14,7 @@ import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Set;
@@ -44,11 +45,9 @@ public class TaskManagementRESTServiceTeamI implements ResourceContainer
     }
     private CalendarService calService;  
 	private final ExoContainer container;
-	private String username;
     public TaskManagementRESTServiceTeamI(ExoContainerContext ctx) {
         this.container = ctx.getContainer();
         calService = (CalendarService)container.getComponentInstanceOfType(CalendarService.class);
-        username = ConversationState.getCurrent().getIdentity().getUserId();
     }
 	
     @GET
@@ -68,6 +67,7 @@ public class TaskManagementRESTServiceTeamI implements ResourceContainer
         Calendar defaultCalendar;
         
         /* Start prototype, get the first calendar*/
+        String username = ConversationState.getCurrent().getIdentity().getUserId();
         defaultCalendar = calService.getUserCalendars(username, true).get(0);
         calendarid = defaultCalendar.getId();
         /* End of prototype*/
@@ -107,8 +107,14 @@ public class TaskManagementRESTServiceTeamI implements ResourceContainer
           @QueryParam("status") String newStatus) throws Exception {
       CalendarEvent calendarEvent;
       newStatus = getRightState(newStatus);
-      calendarEvent = calService.getEvent(username, newStatus);
-      calendarEvent.setStatus(newStatus);
+      String username = ConversationState.getCurrent().getIdentity().getUserId();
+      calendarEvent = calService.getEvent(username, taskid);
+      calendarEvent.setEventState(newStatus);
+      List<CalendarEvent> listEvent = new ArrayList<CalendarEvent>();
+      listEvent.add(calendarEvent);
+      String fromCalendar = calendarEvent.getCalendarId();
+      String calType = calendarEvent.getCalType();
+      calService.moveEvent(fromCalendar, fromCalendar, calType, calType, listEvent, username);
       return Response.ok("true", MediaType.APPLICATION_JSON).cacheControl(cc).build();
     }
   
@@ -118,8 +124,14 @@ public class TaskManagementRESTServiceTeamI implements ResourceContainer
     @Path("task/get")
     @Consumes({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
     public Response updateTaskStatus(@QueryParam("status") String status) throws Exception {
+      String username = ConversationState.getCurrent().getIdentity().getUserId();
       List<CalendarEvent> eventList = getEventsByStatus(username, status);
-      return Response.ok("true", MediaType.APPLICATION_JSON).cacheControl(cc).build();
+      String ret = "{ \"events\": [";
+      for (CalendarEvent evt : eventList) {
+        ret += "\"value\": \"" + evt.getId() + "\",";
+      }
+      ret += "]}";
+      return Response.ok(ret, MediaType.APPLICATION_JSON).cacheControl(cc).build();
     }
   
     public static Date parseDateTime(String dateString) {
@@ -167,7 +179,7 @@ public class TaskManagementRESTServiceTeamI implements ResourceContainer
         eventQuery.setCalendarId(calList);
         List<CalendarEvent> userEvents = null;
         try {
-        	userEvents =  calService.getEvents(username, eventQuery, calList);
+        	userEvents =  calService.getEvents(rUsername, eventQuery, calList);
         } catch (Exception e)
         {
         	LOG.info("Exception during get userEvent");
@@ -177,10 +189,15 @@ public class TaskManagementRESTServiceTeamI implements ResourceContainer
     }
     /*Verify states*/
     private String getRightState(String state) {
-        if (!Arrays.asList(CalendarEvent.TASK_STATUS).contains(state)) {
-            state = CalendarEvent.TASK_STATUS[0];
-        } else {
-      	  LOG.info("Task status can not be " + state + ". The default is in used" );
+        try {
+            int stateInt = Integer.parseInt(state);
+            if (stateInt < 0 || stateInt >= CalendarEvent.TASK_STATUS.length) {
+            	throw new Exception(); 
+            }
+            state =  CalendarEvent.TASK_STATUS[stateInt]; 
+        } catch (Exception e){
+        	LOG.info("State can not be " + state + ". The default is in used" );
+        	state = CalendarEvent.TASK_STATUS[0];
         }
         return state;
     }
@@ -189,4 +206,5 @@ public class TaskManagementRESTServiceTeamI implements ResourceContainer
     	String[] groups = groupsSet.toArray(new String[groupsSet.size()]);
         return groups;
     }
+
 }
