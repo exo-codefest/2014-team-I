@@ -15,6 +15,10 @@
 * Code Fest 2014 
 */
 
+#UIPortalApplication .UIWorkingWorkspace {
+    z-index: auto !important;
+}
+
 .div1 {
 display: inline-block;padding:10px;border:1px solid #aaaaaa;
 color:#aeaeae
@@ -291,7 +295,7 @@ img.displayed {
       </div>
 
 <!-- MODAL WITH BUTTON -->
-<div style="display: none; z-index:100" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" class="modal hide fade UIPopupWindow uiPopup UIDragObject NormalStyle" id="myModal">
+<div style="display: none;" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" class="modal hide fade UIPopupWindow uiPopup UIDragObject NormalStyle" id="myModal">
 		<div class="popupHeader ClearFix">
 			<a data-dismiss="modal" aria-hidden="true" class="uiIconClose pull-right"></a>
 			<span class="PopupTitle popupTitle">Add task</span>
