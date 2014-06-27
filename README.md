@@ -1,7 +1,7 @@
 D2 - Task Management Addon - CodeFest 2014 team I
 ===========
 
-!(https://app.box.com/representation/file_version_15946621028/image_2048/1.png?shared_name=ginql8g30t0gg1ju6xhw "D2 logo")
+![D2 logo](https://app.box.com/representation/file_version_15946621028/image_2048/1.png?shared_name=ginql8g30t0gg1ju6xhw "D2 logo")
 
 # The team I
 
@@ -14,7 +14,7 @@ Tran Trung Thanh | GSS
 
 # Task drag and drop, easier than ever
 
-!(https://app.box.com/representation/file_version_15946622132/image_2048/1.png?shared_name=ginql8g30t0gg1ju6xhw "figure1")
+![Figure 1](https://app.box.com/representation/file_version_15946622132/image_2048/1.png?shared_name=ginql8g30t0gg1ju6xhw "figure1")
 
 # Introduction
 
