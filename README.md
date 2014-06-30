@@ -55,4 +55,29 @@ This addon is designed to be compatible with eXo Platform 4.1.
 
 <img src="https://app.box.com/representation/file_version_16021387796/image_2048/1.png?shared_name=ginql8g30t0gg1ju6xhw" />
 
+## User Interface Design
+
+### Home Screen
+
+<img src="https://app.box.com/representation/file_version_16022108650/image_2048_jpg/1.jpg?shared_name=ginql8g30t0gg1ju6xhw" />
+
+### Add Task Popup Window
+
+<img src="https://app.box.com/representation/file_version_15946624136/image_2048/1.png?shared_name=ginql8g30t0gg1ju6xhw" />
+
+### Edit Task Popup Window
+
+<img src="https://app.box.com/representation/file_version_15946625140/image_2048/1.png?shared_name=ginql8g30t0gg1ju6xhw" />
+
+## Module Design
+
+### REST Services
+
+#### Add New Task
+
+*Description:* Add new task to a specific calendar
+
+_REST: /rest/taskmanagement/task/add?param1=value1&param2=value2_
+
+
 
