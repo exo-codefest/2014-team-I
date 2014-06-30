@@ -120,10 +120,12 @@ status  | Target status (0: Need action, 1: In progress, 2: Completed, 3: Cancel
 
 # Implementaion
 
-**Github repository:** git@github.com:exo-codefest/2014-team-I.git
-**Build job:** https://ci.exoplatform.org/job/addon-codefest-2014-team-I-master-ci/
-**Acceptance deployment job:** https://ci.exoplatform.org/job/platform-community-4.1-M2-codefest-team_I-1.0.x-SNAPSHOT-deploy-acc/
-**Acceptance test url:** http://codefest-4.1-m2-codefest-team_i.acceptance5.exoplatform.org/
+Technical Resources | 
+------------ | -------------
+**Github repository:** | git@github.com:exo-codefest/2014-team-I.git
+**Build job:** | https://ci.exoplatform.org/job/addon-codefest-2014-team-I-master-ci/
+**Acceptance deployment job:** | https://ci.exoplatform.org/job/platform-community-4.1-M2-codefest-team_I-1.0.x-SNAPSHOT-deploy-acc/
+**Acceptance test url:** | http://codefest-4.1-m2-codefest-team_i.acceptance5.exoplatform.org/
 
 # References
 
