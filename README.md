@@ -23,6 +23,8 @@ Getting the idea from the whiteboard where we have the scrum meeting in front of
 
 This addon is designed to be compatible with eXo Platform 4.1.
 
+<img src="https://app.box.com/representation/file_version_15946627692/image_2048/1.png?shared_name=ginql8g30t0gg1ju6xhw" />
+
 # Specific Requirements
 
 ## Functions Requirements 
@@ -75,9 +77,56 @@ This addon is designed to be compatible with eXo Platform 4.1.
 
 #### Add New Task
 
-*Description:* Add new task to a specific calendar
+**Description:** Add new task to a specific calendar
 
 _REST: /rest/taskmanagement/task/add?param1=value1&param2=value2_
 
+Parameter | Definition
+------------ | -------------
+calendarid | Calendar ID to save
+name | Task Summary
+description | Task description
+startdate | Start Date in JSON format
+enddate | End Date in JSON format
+participants | Task Delegator
+priority | Task Priority (0: None, 1: Low, 2: Medium, 3: High)
 
+#### Change task status
 
+**Description:** Change status of a specific task
+_REST: /rest/taskmanagement/task/edit?taskid=value&status=value_
+
+Parameter | Definition
+------------ | -------------
+taskid	| Task ID to change
+status	| Target status (0: Need action, 1: In progress, 2: Completed, 3: Cancelled)
+
+#### Get tasks by status
+
+**Description:** Get tasks by status
+_REST: /rest/taskmanagement/task/get?status=value_
+
+Parameter | Definition
+------------ | -------------
+status  | Target status (0: Need action, 1: In progress, 2: Completed, 3: Cancelled)
+
+### UI Module
+
+**Purpose:**
+
+* Render tasks by status
+* View task detail
+* Create new task
+
+# Implementaion
+
+**Github repository:** git@github.com:exo-codefest/2014-team-I.git
+**Build job:** https://ci.exoplatform.org/job/addon-codefest-2014-team-I-master-ci/
+**Acceptance deployment job:** https://ci.exoplatform.org/job/platform-community-4.1-M2-codefest-team_I-1.0.x-SNAPSHOT-deploy-acc/
+**Acceptance test url:** http://codefest-4.1-m2-codefest-team_i.acceptance5.exoplatform.org/
+
+# References
+
+_eXo Platform Calendar REST API: http://docs.exoplatform.com/PLF41/rest-api/calendar/_
+
+# Get Started
