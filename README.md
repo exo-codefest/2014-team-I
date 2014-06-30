@@ -2,7 +2,7 @@ D2 Task Management - CodeFest 2014 team I
 ===========
 **Task drag and drop, easier than ever**
 
-<img src="https://app.box.com/representation/file_version_15946621028/image_2048/1.png?shared_name=ginql8g30t0gg1ju6xhw" width=30% height=30% />
+<img src="https://app.box.com/representation/file_version_15946621028/image_2048/1.png?shared_name=ginql8g30t0gg1ju6xhw" width=50% height=50% />
 
 # The team I
 
@@ -130,5 +130,3 @@ Acceptance test url | http://codefest-4.1-m2-codefest-team_i.acceptance5.exoplat
 # References
 
 _eXo Platform Calendar REST API: http://docs.exoplatform.com/PLF41/rest-api/calendar/_
-
-# Get Started
